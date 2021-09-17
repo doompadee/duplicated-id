@@ -1,0 +1,7 @@
+{{ define "main" }}
+    {{ $root := .GetPage "/news" }}
+    {{ $pages := $root.Pages }}
+    {{ range $index, $page := $pages }}
+        {{ $page.Render "entry" }}
+    {{ end }}
+{{ end }}
